@@ -1,0 +1,44 @@
+body {
+    /*margin : 바깥쪽 | padding : 안쪽*/
+    margin: 0;
+
+    /* 가운데 정렬 옵션은 아래 두 줄이 필요*/
+    display: flex;
+    justify-content: center;
+
+    /*배경이미지 추가*/
+    background-image: url("./background.png");
+}
+
+.container {
+    width: 390px;   /*핸드폭 가로폭과 비슷하다고 함*/
+    background-color: #ff9d73;
+    height: 100%;   /*container의 높이만큼*/
+}
+
+.photos { margin-top: 30px;}
+.photo-frame {
+    background-color: white;
+    margin: 15px 20px;
+    height: 200px;
+}
+
+.footer {
+    /*왼쪽으로 치우쳐있는걸 가운데로 이동시키자*/
+    display: flex;
+    /*column 형태가 위아래 | row 형태는 가로로*/
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_title{
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.footer_date{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
