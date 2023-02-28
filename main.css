@@ -17,10 +17,15 @@ body {
 }
 
 .photos { margin-top: 30px;}
+
 .photo-frame {
     background-color: white;
     margin: 15px 20px;
     height: 200px;
+    background-size: cover;
+
+    position: relative;
+    cursor: pointer;
 }
 
 .footer {
@@ -41,4 +46,46 @@ body {
     color: white;
     font-size: 20px;
     font-weight: 500;
+}
+
+#image1 {background-image: url(./img1.png);}
+#image2 {background-image: url(./img2.png);}
+#image3 {background-image: url(./img3.png);}
+
+.photo-desc {
+    color: white;
+    background-color: black;
+    /*글자에 맞는 가로넓이를 가져라*/
+    width: fit-content;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    /*photo-frame에서 position:relative했기에*/
+    position: absolute;
+    /*frame기준으로 bottom에서 0만큼 떨어져서 : 곧 맨 밑에 위치해라*/
+    bottom: 0;
+
+    /*transform : translate(-50%) : photo_desc 클래스 맨 왼쪽에서 -50%이동*/
+    transform: translate(-50%);
+    /*왼쪽에서 50% 띄워라*/
+    left: 50%;
+
+    opacity: 0;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+}
+
+.hideText {
+    /*투명도 0 : 투명해짐*/
+    opacity: 0;
+}
+
+.showText {
+    /*1 : 변화없음*/
+    opacity: 1;
+    transition: opacity 0.5s linear;
 }
